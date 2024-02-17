@@ -1,5 +1,5 @@
 :root {
-    --action:#94A2ff;
+    --action:#7749F8;
     --hero:#F3F5FA;
     --text:#D6D9F0;
     --supportText:#7B819E;
@@ -9,17 +9,41 @@
     font-family: Manrope;
 }
 
+* {
+    margin:0;
+    padding: 0;
+}
+
 .backdrop {
-    background-color: white;
+    width:40%;
+}
+
+.logoBackdrop {
+    height:20%;
+    width:100%;
+    background-color: var(--surfacePrimary);
+    display: flex;
+    justify-content: center;
+    opacity: .8;
+    position: relative;
+    top:20%;
 }
 
 body {
     background-image: url('laura-vinck.jpg');
     display:flex;
+    
 }
 
 .logInContainer {
     background-color: var(--surfacePrimary);
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap:32px;
+    align-items: flex-start;
+    height:100vh;
+    width:60%;
 }
 
 h1 {
@@ -27,13 +51,22 @@ h1 {
     font-size: 2rem;
 }
 
+form {
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    gap:42px;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
 fieldset {
     background-color: var(--surfaceSecondary);
     padding:32px;
     border-radius: 22px;
-    display:flex;
-    flex-wrap: wrap;
     border-style: none;
+    max-width: 700px;
+    
 }
 
 legend {
@@ -41,24 +74,81 @@ legend {
     color:var(--text)
 }
 
-li {
-    list-style: none;
+ul {
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
-input {
-    background-color: (var(--surfacePrimary));
-    color:var(--text);
-    font-size: 1.025rem;
+li {
+    list-style: none;
+    width:clamp(230px,50%,360px)
 }
 
 label {
     color: var(--supportText);
     display: flex;
     flex-direction: column;
+    padding: 12px;
 }
 
 input {
     padding: 12px;
     border: 2px solid var(--supportText);
     border-radius: 12px;
+    background-color: (var(--surfacePrimary));
+    color:var(--text);
+    font-size: 1.025rem;
+}
+
+input:invalid {
+    border: 2px solid #F8330C;
+}
+
+input:focus {
+    outline: none;
+    border: 2px solid var(--action);
+    box-shadow: #15182D 1px 2px 2px 1px;
+}
+
+button[type="submit"] {
+    padding:12px;
+    border-radius: 12px;
+    border-style: none;
+    font-size: 1.025rem;
+    background-color: var(--action);
+    color:var(--hero);
+}
+
+button[type="submit"]:hover {
+    background-color: #4E28BB;
+    transform: scale(1.05);
+}
+
+button[type="submit"]:active {
+    background-color: #A282FF;
+}
+
+button[type="button"] {
+    padding-left: 4px;
+    border-style: none;
+    font-size: 1.025rem;
+    color:var(--action);
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+button[type="button"]:hover {
+    color: #4E28BB;
+    transform: scale(1.05);
+}
+
+button[type="button"]:active {
+    color: #A282FF;
+}
+
+p {
+    font-size: 1.025rem;
+    color:var(--text)
 }
