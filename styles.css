@@ -1,0 +1,64 @@
+:root {
+    --action:#94A2ff;
+    --hero:#F3F5FA;
+    --text:#D6D9F0;
+    --supportText:#7B819E;
+    --designLine:#474C67;
+    --surfaceSecondary:#35384D;
+    --surfacePrimary:#15182D;
+    font-family: Manrope;
+}
+
+.backdrop {
+    background-color: white;
+}
+
+body {
+    background-image: url('laura-vinck.jpg');
+    display:flex;
+}
+
+.logInContainer {
+    background-color: var(--surfacePrimary);
+}
+
+h1 {
+    color:var(--hero);
+    font-size: 2rem;
+}
+
+fieldset {
+    background-color: var(--surfaceSecondary);
+    padding:32px;
+    border-radius: 22px;
+    display:flex;
+    flex-wrap: wrap;
+    border-style: none;
+}
+
+legend {
+    font-size: 1.5rem;
+    color:var(--text)
+}
+
+li {
+    list-style: none;
+}
+
+input {
+    background-color: (var(--surfacePrimary));
+    color:var(--text);
+    font-size: 1.025rem;
+}
+
+label {
+    color: var(--supportText);
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    padding: 12px;
+    border: 2px solid var(--supportText);
+    border-radius: 12px;
+}
